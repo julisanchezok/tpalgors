@@ -1,0 +1,53 @@
+using System;
+
+namespace Tpfinal
+{
+	/// <summary>
+	/// Description of tecnico.
+	/// </summary>
+	public class tecnico
+	{
+		//atributos
+ 
+	private string nombre;
+	private string apellido;
+	private int numtec; //ju
+	private string area;
+	
+	//Costructor
+	public tecnico (int numt, string nombre, string apellido, string area)
+	{
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.area= area;
+		this.numtec=numt;
+	}
+	
+	public string Nombre 
+	{
+		set{nombre= value;}
+		get{return nombre;}
+	}
+	public string Apellido 
+	{
+		set{this.apellido = value;} //ju
+		get{return this.apellido;}
+	}	
+	public string Area 
+	{
+		set{area= value;}
+		get{return area;}
+	}
+	public int Numtec
+	{
+		set{this.numtec=value;}
+		get{return this.numtec;}
+			
+	}
+
+	//metodos
+	public void ImprimirTecnico(){
+		Console.WriteLine(numtec +" "+ nombre +" "+apellido+" "+area);
+	}
+	}
+}
